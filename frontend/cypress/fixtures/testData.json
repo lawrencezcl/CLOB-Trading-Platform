@@ -1,0 +1,288 @@
+{
+  "marketData": {
+    "default": {
+      "lastPrice": 8.50,
+      "volume24h": 125000,
+      "change24h": 2.5,
+      "high24h": 8.75,
+      "low24h": 8.25,
+      "lastUpdate": 1640995200000
+    },
+    "volatile": {
+      "lastPrice": 12.80,
+      "volume24h": 500000,
+      "change24h": 15.7,
+      "high24h": 13.50,
+      "low24h": 7.20,
+      "lastUpdate": 1640995200000
+    },
+    "bearish": {
+      "lastPrice": 6.20,
+      "volume24h": 75000,
+      "change24h": -8.3,
+      "high24h": 8.90,
+      "low24h": 6.15,
+      "lastUpdate": 1640995200000
+    }
+  },
+  
+  "orderBook": {
+    "default": {
+      "bids": [
+        { "price": 8.50, "size": 100, "orderId": 1, "user": "0x123", "timestamp": 1640995200000 },
+        { "price": 8.49, "size": 150, "orderId": 2, "user": "0x456", "timestamp": 1640995150000 },
+        { "price": 8.48, "size": 200, "orderId": 3, "user": "0x789", "timestamp": 1640995100000 },
+        { "price": 8.47, "size": 75, "orderId": 4, "user": "0xabc", "timestamp": 1640995050000 },
+        { "price": 8.46, "size": 300, "orderId": 5, "user": "0xdef", "timestamp": 1640995000000 }
+      ],
+      "asks": [
+        { "price": 8.51, "size": 120, "orderId": 6, "user": "0x321", "timestamp": 1640995200000 },
+        { "price": 8.52, "size": 180, "orderId": 7, "user": "0x654", "timestamp": 1640995150000 },
+        { "price": 8.53, "size": 250, "orderId": 8, "user": "0x987", "timestamp": 1640995100000 },
+        { "price": 8.54, "size": 90, "orderId": 9, "user": "0xcba", "timestamp": 1640995050000 },
+        { "price": 8.55, "size": 400, "orderId": 10, "user": "0xfed", "timestamp": 1640995000000 }
+      ]
+    },
+    "thin": {
+      "bids": [
+        { "price": 8.50, "size": 10, "orderId": 1, "user": "0x123", "timestamp": 1640995200000 },
+        { "price": 8.45, "size": 15, "orderId": 2, "user": "0x456", "timestamp": 1640995100000 }
+      ],
+      "asks": [
+        { "price": 8.55, "size": 12, "orderId": 3, "user": "0x789", "timestamp": 1640995200000 },
+        { "price": 8.60, "size": 18, "orderId": 4, "user": "0xabc", "timestamp": 1640995100000 }
+      ]
+    },
+    "empty": {
+      "bids": [],
+      "asks": []
+    }
+  },
+
+  "userBalances": {
+    "wealthy": {
+      "apt_balance": 10000,
+      "usdc_balance": 85000,
+      "total_volume": 500000,
+      "trade_count": 245,
+      "last_updated": 1640995200000
+    },
+    "moderate": {
+      "apt_balance": 1000,
+      "usdc_balance": 8500,
+      "total_volume": 25000,
+      "trade_count": 45,
+      "last_updated": 1640995200000
+    },
+    "poor": {
+      "apt_balance": 10,
+      "usdc_balance": 85,
+      "total_volume": 500,
+      "trade_count": 5,
+      "last_updated": 1640995200000
+    },
+    "empty": {
+      "apt_balance": 0,
+      "usdc_balance": 0,
+      "total_volume": 0,
+      "trade_count": 0,
+      "last_updated": 1640995200000
+    }
+  },
+
+  "testOrders": {
+    "validBuyOrder": {
+      "side": "buy",
+      "price": 8.50,
+      "quantity": 100,
+      "type": "limit",
+      "timeInForce": "GTC"
+    },
+    "validSellOrder": {
+      "side": "sell",
+      "price": 8.55,
+      "quantity": 150,
+      "type": "limit",
+      "timeInForce": "GTC"
+    },
+    "marketBuyOrder": {
+      "side": "buy",
+      "quantity": 100,
+      "type": "market"
+    },
+    "marketSellOrder": {
+      "side": "sell",
+      "quantity": 150,
+      "type": "market"
+    },
+    "invalidOrders": {
+      "zeroQuantity": {
+        "side": "buy",
+        "price": 8.50,
+        "quantity": 0,
+        "type": "limit"
+      },
+      "zeroPrice": {
+        "side": "buy",
+        "price": 0,
+        "quantity": 100,
+        "type": "limit"
+      },
+      "negativeQuantity": {
+        "side": "buy",
+        "price": 8.50,
+        "quantity": -100,
+        "type": "limit"
+      },
+      "negativePrice": {
+        "side": "buy",
+        "price": -8.50,
+        "quantity": 100,
+        "type": "limit"
+      }
+    }
+  },
+
+  "liquidationScenarios": {
+    "safePosition": {
+      "collateral_amount": 2000000,
+      "borrowed_amount": 1000000,
+      "collateral_price": 2000000,
+      "liquidation_threshold": 1200000
+    },
+    "marginCallPosition": {
+      "collateral_amount": 1300000,
+      "borrowed_amount": 1000000,
+      "collateral_price": 1300000,
+      "liquidation_threshold": 1200000
+    },
+    "liquidatablePosition": {
+      "collateral_amount": 1100000,
+      "borrowed_amount": 1000000,
+      "collateral_price": 1100000,
+      "liquidation_threshold": 1200000
+    }
+  },
+
+  "crossChainBridge": {
+    "validBridge": {
+      "fromChain": "ETHEREUM",
+      "toChain": "APTOS",
+      "asset": "USDC",
+      "amount": 1000,
+      "recipient": "0x1234567890abcdef1234567890abcdef12345678"
+    },
+    "bridgeRoutes": [
+      {
+        "provider": "LayerZero",
+        "fromChain": "ETHEREUM",
+        "toChain": "APTOS",
+        "asset": "USDC",
+        "minAmount": 10,
+        "maxAmount": 1000000,
+        "estimatedTime": 300,
+        "fee": 0.1
+      },
+      {
+        "provider": "Wormhole",
+        "fromChain": "SOLANA",
+        "toChain": "APTOS",
+        "asset": "SOL",
+        "minAmount": 0.1,
+        "maxAmount": 10000,
+        "estimatedTime": 180,
+        "fee": 0.15
+      }
+    ]
+  },
+
+  "liquidityAggregation": {
+    "multipleSources": {
+      "sources": [
+        {
+          "name": "Aptos CLOB",
+          "chain": "APTOS",
+          "weight": 1.0,
+          "fees": 0.1,
+          "isActive": true
+        },
+        {
+          "name": "Merkle Trade",
+          "chain": "APTOS",
+          "weight": 0.8,
+          "fees": 0.15,
+          "isActive": true
+        },
+        {
+          "name": "Uniswap V3",
+          "chain": "ETHEREUM",
+          "weight": 0.9,
+          "fees": 0.3,
+          "isActive": true
+        }
+      ],
+      "aggregatedOrderBook": {
+        "bids": [
+          { "price": 8.51, "size": 200, "sources": ["Aptos CLOB", "Merkle Trade"], "weight": 0.9 },
+          { "price": 8.50, "size": 150, "sources": ["Aptos CLOB"], "weight": 1.0 },
+          { "price": 8.49, "size": 300, "sources": ["Uniswap V3"], "weight": 0.9 }
+        ],
+        "asks": [
+          { "price": 8.52, "size": 180, "sources": ["Aptos CLOB"], "weight": 1.0 },
+          { "price": 8.53, "size": 220, "sources": ["Merkle Trade", "Uniswap V3"], "weight": 0.85 },
+          { "price": 8.54, "size": 250, "sources": ["Uniswap V3"], "weight": 0.9 }
+        ]
+      },
+      "liquidityMetrics": {
+        "liquidityScore": 78.5,
+        "spreadPercent": 0.12,
+        "totalDepth": 125000,
+        "activeSources": 3
+      }
+    }
+  },
+
+  "walletAddresses": {
+    "testUser1": "0x1234567890abcdef1234567890abcdef12345678",
+    "testUser2": "0x2345678901bcdef12345678901bcdef123456789",
+    "testUser3": "0x3456789012cdef123456789012cdef12345678a",
+    "liquidator": "0x456789012def123456789012def123456789012",
+    "admin": "0x567890123ef123456789023ef123456789012345"
+  },
+
+  "apiResponses": {
+    "success": {
+      "status": "success",
+      "timestamp": 1640995200000,
+      "data": {}
+    },
+    "error": {
+      "status": "error",
+      "timestamp": 1640995200000,
+      "error": {
+        "code": "INTERNAL_ERROR",
+        "message": "An internal error occurred"
+      }
+    },
+    "networkError": {
+      "status": "error",
+      "timestamp": 1640995200000,
+      "error": {
+        "code": "NETWORK_ERROR",
+        "message": "Network connection failed"
+      }
+    },
+    "validationError": {
+      "status": "error",
+      "timestamp": 1640995200000,
+      "error": {
+        "code": "VALIDATION_ERROR",
+        "message": "Invalid input parameters",
+        "details": {
+          "quantity": "Must be greater than 0",
+          "price": "Must be a positive number"
+        }
+      }
+    }
+  }
+}

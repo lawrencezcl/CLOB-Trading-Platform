@@ -1,0 +1,67 @@
+{
+  "name": "aptos-clob-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.8.0",
+    "@aptos-labs/wallet-adapter-react": "^2.0.0",
+    "@aptos-labs/wallet-adapter-ant-design": "^2.0.0",
+    "@martianwallet/aptos-wallet-adapter": "^0.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.8.0",
+    "axios": "^1.5.0",
+    "antd": "^5.10.0",
+    "@ant-design/icons": "^5.2.6",
+    "web3": "^4.1.1",
+    "heatmap.js": "^2.0.5",
+    "graphql": "^15.8.0",
+    "graphql-request": "^5.2.0",
+    "@types/node": "^16.18.58",
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.11",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:headless": "cypress run --headless",
+    "test:e2e": "cypress run --spec 'cypress/e2e/**/*.cy.js'",
+    "test:component": "cypress run --component",
+    "test:e2e:open": "cypress open --e2e",
+    "test:component:open": "cypress open --component"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@cypress/react": "^9.0.1",
+    "@cypress/webpack-dev-server": "^5.1.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "cypress": "^13.17.0"
+  },
+  "proxy": "http://localhost:3001"
+}

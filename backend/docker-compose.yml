@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2-alpine
+    container_name: clob-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    environment:
+      - REDIS_REPLICATION_MODE=master
+    networks:
+      - clob-network
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: clob-redis-ui
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    depends_on:
+      - redis
+    networks:
+      - clob-network
+
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: clob-backend
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+      - "3002:3002"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - WS_PORT=3002
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - clob-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  clob-network:
+    driver: bridge

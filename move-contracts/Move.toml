@@ -1,0 +1,24 @@
+[package]
+name = "aptos_clob"
+version = "1.0.0"
+authors = ["CLOB Trading Platform Team"]
+
+[addresses]
+aptos_clob = "_"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "aptos-node-v1.8.0"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "aptos-node-v1.8.0"
+subdir = "aptos-move/framework/aptos-stdlib"
+
+[dependencies.MoveStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "aptos-node-v1.8.0"
+subdir = "aptos-move/framework/move-stdlib"
+
+[dev-dependencies]
