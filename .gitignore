@@ -113,6 +113,10 @@ backend/uploads/
 # Testing
 cypress/videos/
 cypress/screenshots/
+frontend/cypress/videos/
+frontend/cypress/screenshots/
+*.mp4
+*.png
 
 # Aptos specific
 *.bpl
