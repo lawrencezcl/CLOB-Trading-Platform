@@ -1,3 +1,6 @@
+# CLOB-Trading-Platform
+A comprehensive Central Limit Order Book (CLOB) trading platform built on Aptos that aggregates liquidity from multiple sources including native Aptos DEXs and cross-chain assets.
+>>>>>>> 8c2f653beb19633b1e8346e5d1496504800eb130
 # Aptos Multi-Chain Asset Aggregated CLOB Trading Platform
 
 A comprehensive Central Limit Order Book (CLOB) trading platform built on Aptos that aggregates liquidity from multiple sources including native Aptos DEXs and cross-chain assets.
@@ -44,22 +47,22 @@ A comprehensive Central Limit Order Book (CLOB) trading platform built on Aptos 
 ### Phase 1: Setup (1-2 days)
 - [x] Environment setup
 - [x] Project structure
-- [ ] API integration testing
+- [x] API integration testing
 
 ### Phase 2: Core Build (3-4 days)
-- [ ] Move contract development
-- [ ] Frontend dashboard
-- [ ] Cross-chain integration
+- [x] Move contract development
+- [x] Frontend dashboard
+- [x] Cross-chain integration
 
 ### Phase 3: Integration & Testing (2 days)
-- [ ] Security auditing
-- [ ] E2E testing
-- [ ] Performance optimization
+- [x] Security auditing
+- [x] E2E testing
+- [x] Performance optimization
 
 ### Phase 4: Deployment (1 day)
-- [ ] Testnet deployment
-- [ ] Production optimization
-- [ ] Final testing
+- [x] Testnet deployment
+- [x] Production optimization
+- [x] Final testing
 
 ## 🔧 Quick Start
 
@@ -117,3 +120,7 @@ A comprehensive Central Limit Order Book (CLOB) trading platform built on Aptos 
 ---
 
 Built with ❤️ for the Aptos Hackathon
+=======
+# CLOB-Trading-Platform
+A comprehensive Central Limit Order Book (CLOB) trading platform built on Aptos that aggregates liquidity from multiple sources including native Aptos DEXs and cross-chain assets.
+>>>>>>> 8c2f653beb19633b1e8346e5d1496504800eb130
